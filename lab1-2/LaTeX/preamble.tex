@@ -104,7 +104,7 @@
 \renewcommand{\cftsecfont}{\hspace{0pt}}            % Имена секций в содержании не жирным шрифтом
 \renewcommand\cftsecleader{\cftdotfill{\cftdotsep}} % Точки для секций в содержании
 \renewcommand\cftsecpagefont{\mdseries}             % Номера страниц не жирные
-\setcounter{tocdepth}{2}                            % Глубина оглавления, до subsection
+\setcounter{tocdepth}{1}                            % Глубина оглавления, до subsection
 
 % Список иллюстративного материала
 \renewcommand{\cftloftitlefont}{\hspace{0.17\textwidth}\MakeTextUppercase}
@@ -159,6 +159,7 @@
 \usepackage{etoolbox}
 \makeatletter
 \patchcmd{\l@section}{#1}{\MakeUppercase{#1}}{}{}
+\patchcmd{\l@subsection}{#1}{\MakeUppercase{#1}}{}{}
 \makeatother
 
 % Секция для аннотации (она не включается в содержание)
@@ -211,7 +212,8 @@
 \usepackage{titlesec}
 
 \titleformat{\section}[block]
-{\bfseries\normalsize\filcenter}{\thesection}{1em}{\MakeTextUppercase}
+{\bfseries\normalsize}{\thesection}{1em}{\MakeTextUppercase}
+\titlespacing\section{\parindent}{\parskip}{\parskip}
 
 \titleformat{\subsection}[hang]
 {\bfseries\normalsize}{\thesubsection}{1em}{}

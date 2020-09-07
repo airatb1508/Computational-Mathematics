@@ -1,5 +1,8 @@
-all:
-	pandoc readme.md -o hello.pdf --pdf-engine="xelatex"
+all: out.txt pdf
 
-source:
-	pandoc readme.md -o hello.tex
+out.txt:
+	cd ./program && $(MAKE)
+
+pdf:
+	cd ./LaTeX && $(MAKE)
+
