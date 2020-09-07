@@ -9,6 +9,7 @@ md2pdf:
   script:
     - apk add bash
     - apk add zip
+    - apk add make
     - pandoc --version
     - cd ./lab1-2/LaTeX && make
   artifacts:
