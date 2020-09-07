@@ -6,7 +6,8 @@ stages:
 md2pdf:
   stage: build
   script:
-    - cd lab1-2 && make
+    - pandoc --version
+    - cd ./lab1-2/LaTeX && make
   artifacts:
     paths:
       - lab1-2/lab1-report.pdf
