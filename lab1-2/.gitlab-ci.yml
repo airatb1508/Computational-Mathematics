@@ -1,0 +1,13 @@
+image: 'pandoc/latex'
+
+stages:
+  - build
+
+md2pdf:
+  stage: build
+  script:
+    - make
+  artifacts:
+    paths:
+      - lab1-report.pdf
+

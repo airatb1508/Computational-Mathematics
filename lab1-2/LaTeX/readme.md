@@ -3,10 +3,10 @@ title: "Лабораторная работа №1-2. Итерационные �
 author: 
   - "Бадрутдинов Айрат 4302"
   - "Буравкин Никита 4302"
-output: html_document
+output: pdf_document
+geometry: a4paper
 header-includes:
   - \input{preamble}
-geometry: a4paper
 fontsize: 14pt
 ---
 
