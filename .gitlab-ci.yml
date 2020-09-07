@@ -6,8 +6,8 @@ stages:
 md2pdf:
   stage: build
   script:
-    - make
+    - cd lab1-2 && make
   artifacts:
     paths:
-      - lab1-report.pdf
+      - lab1-2/lab1-report.pdf
 
